@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc Hanh Bong Da</title>
+        <link rel="stylesheet" href="2019-06-24-11-34-35.jpg">
+
+</head>
+<body>
+
+    <img alt=""
+         height="250px"
+         id="anh" src="2019-06-24-11-34-35.jpg" width="200px">
+
+    <br>
+    <button onclick="khiBamNutTrai()">Bên trái</button>
+    <button onclick="khiBamNutPhai()">Bên phải</button>
+
+    <script>
+        let diChuyenAnh;
+
+        function init() {
+            diChuyenAnh = document.getElementById('anh');
+            diChuyenAnh.style.position = 'relative';
+            diChuyenAnh.style.left = '10px';
+        }
+
+        function khiBamNutTrai() {
+            diChuyenAnh.style.left = parseInt(diChuyenAnh.style.left) - 100 + 'px';
+        }
+
+        function khiBamNutPhai() {
+            diChuyenAnh.style.left = parseInt(diChuyenAnh.style.left) + 100 + 'px';
+        }
+
+        window.onload = init;
+    </script>
+
+</body>
+</html>
