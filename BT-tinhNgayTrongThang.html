@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngay Trong Thang</title>
+</head>
+<body>
+<h1>NHẬP SỐ THÁNG ĐỂ KIẾM TRA SỐ NGÀY TRONG THÁNG</h1>
+<label><input id="soThang2" type="number" value=""></label>
+<button onclick="tinh2()">Tinh</button>
+<p>Tháng có :</p>
+<p id="soNgay2"></p>
+<script>
+    function tinh2() {
+        let x = +document.getElementById("soThang2").value
+        console.log(x)
+        switch (x) {
+            case Math.abs(1):
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('soNgay2').innerHTML = " 31 Ngày ";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('soNgay2').innerHTML = '30 Ngày';
+                break;
+            case 2:
+                document.getElementById('soNgay2').innerHTML = '28 Hoặc 29 Ngày';
+                break;
+        }
+    }
+</script>
+<h2> KIỂM TRA THÊM NHÉ!</h2>
+<label><input id="soThang" type="number" value=""></label>
+<button onclick="tinh()">Tinh</button>
+<p>Tháng có :</p>
+<p id="soNgay"></p>
+
+<script>
+    function tinh() {
+        let x = +document.getElementById("soThang").value
+        console.log(x)
+        switch (x) {
+            case Math.abs(1):
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('soNgay').innerHTML = " 31 Ngày ";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('soNgay').innerHTML = '30 Ngày';
+                break;
+            case 2:
+                document.getElementById('soNgay').innerHTML = '28 Hoặc 29 Ngày';
+                break;
+        }
+    }
+</script>
+</body>
+</html>

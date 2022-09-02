@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIEN TICH HINH VUONG</title>
+</head>
+<body>
+<h1> Ban muốn tính diện tích hình vuông à?</h1>
+
+<p>ĐỪNG LO! Nhập kích thước cạnh vào đây nhé:</p>
+
+<input id="canhA" type="text"><BR><BR>
+
+<button id="tinh" onclick="tinhCanhA()">Tính Diện Tích</button>
+<br><br>
+
+<p>Diện tích hình vuông là :</p>
+
+<p id="hienThi"></p>
+<script>
+    function tinhCanhA() {
+        let a = +document.getElementById('canhA').value;
+        let S = a * a
+        document.getElementById('hienThi').innerHTML = S + ' ' + 'm2';
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH GIA DIEN</title>
+</head>
+Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh.
+Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh.
+Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh.
+Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh.
+Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh.
+Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh.
+<body>
+<h1>Nhập số ĐIỆN đã sử dụng để tính giá cước</h1>
+
+<input id="soDien" type="text"><br><br>
+<button id="giaCuoc" onclick="tinhGiaCuoc()">Tính Giá Cước</button>
+<p id="giaTien"></p>
+<script>
+    function tinhGiaCuoc() {
+        let x = +document.getElementById('soDien').value;
+        let ketQua = 0
+        if (x <= 50) {
+            ketQua = x * 1.678
+        } else if (x > 50) {
+            ketQua = (x - 50) * 1.734 + (x * 1.678)
+        } else if (x > 100) {
+            ketQua = (x - 100) * 2.014 + ((x - 50) * 1.734) + (x * 1.678)
+        } else if (x > 300) {
+            ketQua = (x - 300) * 2.834 + ((x - 100) * 2.014) + ((x - 50) * 1.734) + (x * 1.678)
+        } else if (x > 400) {
+            ketQua = (x - 400) * 2.927 + ((x - 300) * 2.834) + ((x - 100) * 2.014) + ((x - 50) * 1.734) + (x * 1.678)
+        }
+        document.getElementById('giaTien').innerHTML = ketQua + ' ' + "VND"
+    }
+</script>
+
+
+</body>
+
+</html>

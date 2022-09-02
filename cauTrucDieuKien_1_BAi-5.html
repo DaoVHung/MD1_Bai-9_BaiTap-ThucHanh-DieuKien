@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHAN 1 BAI 5</title>
+</head>
+<body>
+<h1>Xếp hạng học sinh</h1>
+<p>Nhập điểm kiểm tra:</p><br>
+<input id="KT" type="text"><br>
+<p>Phập điểm thi giữa kỳ:</p><br>
+<input id="GK" type="text"><br>
+<p>Nhập điểm thi cuối kỳ:</p><br>
+<input id="CK" type="text"><br><br><br>
+<button id="kiemtra" onclick="xepHang()">XẾP HẠNG</button>
+<h2>Xếp hạng học lực:</h2>
+<p id="diem"></p>
+<p id="XH"></p>
+<script>
+    function xepHang() {
+        let a = +document.getElementById('KT').value;
+        let b = +document.getElementById('GK').value;
+        let c = +document.getElementById('CK').value;
+        let dtt = (a + b + c) / 3;
+        document.getElementById('diem').innerHTML = dtt
+        if (dtt >= 8) {
+            document.getElementById('XH').innerHTML = "Học sinh GOOD"
+        } else {
+            if (dtt >= 7) {
+                document.getElementById('XH').innerHTML = "Học sinh Khá Bảnh"
+            } else {
+                if (dtt >= 4) {
+                    document.getElementById('XH').innerHTML = "Học sinh Trung BÌNH-GOLD"
+                } else {
+                    document.getElementById('XH').innerHTML = "Học ngu v~..ĐÚP !"
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DO You Love Me</title>
+</head>
+<style>
+    div {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .viTri {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+</style>
+<body>
+
+<div>
+    <h1 style="text-align: center">DO YOU LOVE ME</h1>
+    <div class="viTri">
+        <input id="yes" onclick="ketQuaYes()" style="text-align: center" type="button" value="YES">
+        <input id="no" onmouseover="ketQuaNo()" style="position: absolute; align-items:center" type="button" value="NO">
+    </div>
+    <script>
+        function ketQuaYes() {
+            document.write("I LOVE YOU TOO!!!!")
+        }
+
+        function ketQuaNo() {
+            let NO = document.getElementById("no");
+            NO.style.lefth = Math.round(Math.random() * window.innerHeight) + 'px';
+            NO.style.right = Math.round(Math.random() * window.innerWidth) + 'px';
+        }
+    </script>
+</div>
+</body>
+</html>

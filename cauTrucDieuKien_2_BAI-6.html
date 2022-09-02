@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHUONG TRINH BAC 1</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 1</h1>
+<p>nhập các giá trị tưởng ứng</p>
+<input id="A" style="width: 10px" type="text">X +
+<input id="B" style="width: 10px" type="text"> =
+<input id="C" style="width: 10px" type="text">
+<br><br>
+<button id="tinh" onclick="giai()">Giải Phương Trình</button>
+<p id="hienThi">Phương trình có nghiệm bằng:</p>
+<script>
+    function giai() {
+        let a = +document.getElementById('A').value;
+        let b = +document.getElementById('B').value;
+        let c = +document.getElementById('C').value;
+        let X = (c + (-b)) / a;
+        document.getElementById('hienThi').innerHTML = X;
+    }
+</script>
+</body>
+</html>

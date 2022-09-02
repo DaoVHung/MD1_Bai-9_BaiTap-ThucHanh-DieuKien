@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA CANH TAM GIAC</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhap vao canh A')
+    let b = +prompt('Nhap vao canh B')
+    let c = +prompt('Nhap vao canh C')
+    if (a > 0) {
+        if (b > 0) {
+            if (c > 0) {
+                if (a + b > 0) {
+                    if (b + c > 0) {
+                        if (a + c > 0) {
+                            alert("Ba số đều là cạnh của 1 tam giác!")
+                        } else {
+                            alert('Ba số không phải là cạnh của 1 tam giác!')
+                        }
+                    } else {
+                        alert('Ba số không phải là cạnh của 1 tam giác!')
+                    }
+                } else {
+                    alert('Ba số không phải là cạnh của 1 tam giác!')
+                }
+            }
+        } else {
+            alert('Ba số không phải là cạnh của 1 tam giác!')
+        }
+    } else {
+        alert('Ba số không phải là cạnh của 1 tam giác!')
+    }
+
+</script>
+</body>
+</html>

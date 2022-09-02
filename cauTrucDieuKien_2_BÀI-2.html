@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHUYEN MET SANG FEET</title>
+</head>
+<body>
+<h1>Bình thường không ai dùng Feet cả!</h1>
+<p>CƠ MÀ bạn muốn đổi Met sang Feet thì nhập vào đây !</p>
+
+<input id="met" type="text"><br><br>
+
+<button id="chuyenDoi" onclick="Chuyen()"> Met => Feet</button>
+
+<p>Số feet là:</p>
+
+<p id="hienThi"></p>
+
+<script>
+    function Chuyen() {
+        let m = +document.getElementById('met').value;
+        let ft = m * 3.2808
+        document.getElementById('hienThi').innerHTML = ft + ' ' + 'feet'
+    }
+</script>
+</body>
+</html>

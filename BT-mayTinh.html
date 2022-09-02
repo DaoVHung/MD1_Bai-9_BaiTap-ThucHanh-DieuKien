@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinh</title>
+</head>
+<body>
+<table border="10" style="width: 300px;height: 500px">
+    <tr>
+        <td colspan="4">
+            <input id="manHinh"
+                   style="border-radius: 5%; width: 200px;height: 30px;padding: 30px; border: 30px;margin-left: 10px; margin-right: 12px ">
+        </td>
+    </tr>
+    <tr style="padding: 50px">
+        <td style="">
+            <button onclick="number('1')">1</button>
+        </td>
+        <td>
+            <button onclick="number('2')">2</button>
+        </td>
+        <td>
+            <button onclick="number('3')">3</button>
+        </td>
+        <td>
+            <button onclick="number('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="number('4')">4</button>
+        </td>
+        <td>
+            <button onclick="number('5')">5</button>
+        </td>
+        <td>
+            <button onclick="number('6')">6</button>
+        </td>
+        <td>
+            <button onclick="number('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="number('7')">7</button>
+        </td>
+        <td>
+            <button onclick="number('8')">8</button>
+        </td>
+        <td>
+            <button onclick="number('9')">9</button>
+        </td>
+        <td>
+            <button onclick="number('*')">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="reset('C')">C</button>
+        </td>
+        <td>
+            <button onclick="number('0')">0</button>
+        </td>
+        <td>
+            <button onclick="ketQua()">=</button>
+        </td>
+        <td>
+            <button onclick="number('/')">/</button>
+        </td>
+    </tr>
+    <script>
+        function number(a) {
+            document.getElementById('manHinh').value += a
+        }
+
+        function reset() {
+            document.getElementById('manHinh').value = ''
+        }
+
+        function ketQua() {
+            let input = document.getElementById('manHinh').value;
+            let ketQua = eval(input)
+            document.getElementById('manHinh').value = ketQua
+        }
+
+    </script>
+</table>
+</body>
+</html>

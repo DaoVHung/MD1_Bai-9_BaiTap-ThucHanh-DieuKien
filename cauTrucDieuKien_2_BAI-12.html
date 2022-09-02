@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH LAI NGAN HANG</title>
+</head>
+<body>
+<h1>Nhập thông tin để tính lãi xuất ngân hàng của bạn:</h1>
+<p>Số tiền gửi</p><br>
+<input id="tienGui" style="width: 70px" type="text"> Triệu<br>
+<p>Số lãi xuất ngân hàng (%/năm)</p><br>
+<input id="laiXuat" style="width: 70px" type="text"><br>
+<p>Số tháng gửi</p><br>
+<input id="soThang" style="width: 70px" type="text"><br><br>
+<button id="tinhLai" onclick="tinhTienLai()">Tính Tiền Lãi</button>
+<br>
+<p id="hienThi">Số Tiền Lãi Của Bạn Là:</p>
+<script>
+    function tinhTienLai() {
+        let a = +document.getElementById('tienGui').value;
+        let b = +document.getElementById('laiXuat').value;
+        let c = +document.getElementById('soThang').value;
+        document.getElementById('hienThi').innerHTML = a * b / 12 * c + ' ' + 'Triệu VNĐ'
+    }
+</script>
+</body>
+</html>

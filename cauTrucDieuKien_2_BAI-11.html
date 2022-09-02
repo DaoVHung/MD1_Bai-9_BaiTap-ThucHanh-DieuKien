@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THUE THU NHAP CA NHAN</title>
+</head>
+<h1>Nhập số thu nhập để tính thuế thu nhập cá nhân:</h1>
+<input id="thuNhap" style="width: 70px" type="text"> Triệu <br><br>
+<button id="tinh" onclick="tinhThue()">Tính Thuế</button>
+<br> <br>
+<p>Số thuế bạn phải nộp sau khi giảm trừ các khoản là:</p>
+<p id="hienThi"></p>
+<script>
+    function tinhThue() {
+        let x = +document.getElementById('thuNhap').value;
+        let ketQua = 0
+        if (x <= 5) {
+            ketQua = x * 5 / 100
+        } else if (x <= 10) {
+            ketQua = x * 10 / 100 - 0.25
+        } else if (x <= 18) {
+            ketQua = x * 15 / 100 - 0.75
+        } else if (x <= 32) {
+            ketQua = x * 20 / 100 - 1.65
+        } else if (x <= 52) {
+            ketQua = x * 25 / 100 - 3.25
+        } else if (x <= 80) {
+            ketQua = x * 30 / 100 - 5.85
+        } else if (x > 80) {
+            ketQua = x * 35 / 100 - 9.85
+        }
+        document.getElementById('hienThi').innerHTML = ketQua + '  ' + 'Triệu VNĐ'
+    }
+
+
+</script>
+<body>
+
+</body>
+</html>

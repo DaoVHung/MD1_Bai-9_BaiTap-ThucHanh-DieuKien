@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIEN TICH HINH CHU NHAT</title>
+</head>
+<body>
+<h1> Ban muốn tính diện tích HÌNH CHỮ NHẬT à?</h1>
+
+<p>Nhập kích thước 2 cạnh vào đây nhé:</p>
+Cạnh A <br>
+<input id="canhA" type="text"> <br>
+Cạnh B <br>
+<input id="canhB" type="text">
+<BR><BR>
+
+<button id="tinh" onclick="dienTich()">Tính Diện Tích</button>
+<br><br>
+
+<p>Diện tích hình Chữ Nhật là :</p>
+
+<p id="hienThi"></p>
+
+<script>
+    function dienTich() {
+        let a = +document.getElementById('canhA').value;
+        let b = +document.getElementById('canhB').value;
+        let S = a * b;
+        document.getElementById('hienThi').innerHTML = S + " " + "m2"
+    }
+
+</script>
+</body>
+</html>

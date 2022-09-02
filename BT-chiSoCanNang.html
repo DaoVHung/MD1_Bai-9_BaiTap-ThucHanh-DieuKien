@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi So Can Nang</title>
+</head>
+<body>
+Cân Nặng
+<input id="nang" type="text"/>
+<br><br>
+Chiều Cao
+<input id="cao" type="text">
+<br><br>
+<button onclick="tinhbmi()">Tính BMI</button>
+<p id="bmi">CHỈ SỐ BMI CỦA BẠN LÀ:</p>
+<p id="nhanxet"></p>
+<script>
+    function tinhbmi() {
+        let a = document.getElementById("nang").value;
+        let b = document.getElementById("cao").value;
+        let BMI = a / (b * b);
+        document.getElementById('bmi').innerHTML = "CHỈ SỐ BMI CỦA BẠN LÀ: BMI=" + BMI
+        let nhanXet = BMI;
+        if (nhanXet < 18) {
+            document.getElementById('nhanxet').innerHTML = 'Gầy quá rồi đấy !'
+        } else if (nhanXet < 25.0) {
+            document.getElementById('nhanxet').innerHTML = 'Ngon zai đấy bạn^^'
+        } else {
+            if (nhanXet < 30.0) {
+                document.getElementById('nhanxet').innerHTML = 'Hơi béo rồi nha @@'
+            } else {
+                document.getElementById('nhanxet').innerHTML = 'Khiếp ăn gì béo thế --'
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

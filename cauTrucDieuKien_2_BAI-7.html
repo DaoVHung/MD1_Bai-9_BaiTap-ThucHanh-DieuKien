@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHUONG TRINH BAC 2</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<p>nhập các giá trị tưởng ứng</p>
+<input id="A" style="width: 10px" type="text">X^2 +
+<input id="B" style="width: 10px" type="text">x +
+<input id="C" style="width: 10px" type="text"> = 0
+
+<br><br>
+<button id="tinh" onclick="giai()">Giải Phương Trình</button>
+<p id="hienThi">Phương trình có nghiệm bằng:</p>
+<script>
+    function giai() {
+        let a = +document.getElementById('A').value;
+        let b = +document.getElementById('B').value;
+        let c = +document.getElementById('C').value;
+        let N = b * b - 4 * a * c;
+        if (N > 0) {
+            document.getElementById('hienThi').innerHTML = 'Phương trình có 2 nghiệm: x1=' + (-(b + Math.sqrt(N))) / (2 * a) + ' ' + ' ' + 'và' + ' ' + 'x2=' + ' ' + (-(b - Math.sqrt(N)) / (2 * a))
+        } else {
+            if (N == 0) {
+                document.getElementById('hienThi').innerHTML = 'Phương trìnhc có nghiệm kép là: x1 = x2 =' + ' ' + (-b / 2 * a)
+            } else {
+                if (N < 0) {
+                    document.getElementById('hienThi').innerHTML = 'Phương trình vô nghiêm !'
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

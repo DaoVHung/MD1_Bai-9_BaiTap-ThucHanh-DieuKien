@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHAN 1 BAI 7</title>
+</head>
+<!--Phí thuê bao bắt buộc là 25 nghìn.-->
+<!--600 đồng cho mỗi gọi của 50 phút đầu tiên.-->
+<!--400 đồng cho mỗi phút gọi của 150 phút tiếp theo.-->
+<!--200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.-->
+<!--<body>-->
+<h1>Nhập số phút bạn đã gọi để tính giá cước</h1>
+<input id="soPhut" type="text"><br><br>
+<button id="giaCuoc" onclick="tinhGiaCuoc()">Tính Giá Cước</button>
+<p id="giaTien"></p>
+<script>
+    function tinhGiaCuoc() {
+        let x = +document.getElementById('soPhut').value;
+        let y = 25000;
+        let ketQua = 0
+        if (x < 50) {
+            ketQua = y
+        } else if (x > 50) {
+            ketQua = y + ((x - 50) * 600)
+        } else if (x > 150) {
+            ketQua = y + ((x - 150) * 400) + ((x - 50) * 600)
+        } else if (x > 200) {
+            ketQua = y + ((x - 150) * 400) + ((x - 50) * 600) + ((x - 200) * 200)
+        }
+        document.getElementById('giaTien').innerHTML = ketQua + '.VND';
+    }
+</script>
+</body>
+</html>

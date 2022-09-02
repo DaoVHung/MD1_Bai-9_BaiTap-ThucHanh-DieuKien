@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHUYEN DO C SANG DO F</title>
+</head>
+<body>
+<h1> Ban muốn đổi độ C sang độ F Ư??</h1>
+<p>ĐỪNG LO! Hãy nhập độ C vào dưới đây:</p>
+<input id="doC" name="do C" type="text"><BR><BR>
+<button id="chuyenDo" onclick="chuyenF()">CHUYỂN ĐỔI</button>
+<br><br>
+<p>ĐỘ F LÀ</p>
+<p id="hienThi"></p>
+<script>
+    function chuyenF() {
+        let C = +document.getElementById('doC').value;
+        let doF = 9 / 5 * C + 32
+        document.getElementById('hienThi').innerHTML = doF + "   " + "độ F"
+    }
+</script>
+
+</body>
+</html>
