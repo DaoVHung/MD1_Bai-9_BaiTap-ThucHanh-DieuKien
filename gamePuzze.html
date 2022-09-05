@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <title>Game Puzze</title>
 </head>
-<style>
-  div{
-    background-color: lightslategray;
-
-  }
-
-</style>
 <body>
 <h1 id="hienThi">Xếp lại ảnh để WIN</h1>
 <img id="anh1" src="anhDen1.jpeg" onclick="cot1()"width="500px" height="150px">
@@ -18,52 +11,59 @@
 <img id="anh3" src="anhTim3.jpeg" onclick="cot3()" width="500" height="150">
 
 <script>
-  let count1=1;
-  let count2=2;
-  let count3=3;
+  let click1=1;
+  let click2=2;
+  let click3=3;
   let anh1=document.getElementById('anh1');
   let anh2=document.getElementById('anh2');
   let anh3=document.getElementById('anh3');
+  checkShadow()
 
   function cot1(){
-    count1++;
-    if(count1==1){
+    click1++;
+    if(click1==2){
       anh1.src="anhDo1.jpeg"
-    }else if(count1==2){
+    }else if(click1==3){
       anh1.src="anhTim1.jpeg"
     }else {
-      count1=0
+      click1=1
       anh1.src="anhDen1.jpeg"
     }
     ketQua()
   }
   function cot2(){
-    count2++;
-    if ( count2==1){
+    click2++;
+    if ( click2==2){
       anh2.src="anhDo2.jpeg"
-    }else if (count2==2){
+    }else if (click2==3){
       anh2.src="anhTim2.jpeg"
     }else {
-      count2=0;
+      click2=1;
       anh2.src="anhDen2.jpeg"
     }
     ketQua()
   }
   function cot3(){
-    count3++;
-    if ( count3==1){
+    click3++;
+    if ( click3==2){
       anh3.src="anhDo3.jpeg"
-    }else if (count3==2){
+    }else if (click3==3){
       anh3.src="anhTim3.jpeg"
     }else {
-      count3=0;
+      click3=1;
       anh3.src="anhDen3.jpeg"
     }
     ketQua()
   }
   function ketQua(){
-    if(count1==count2 && count2==count3) {
-    document.getElementById('hienThi').innerHTML="Bạn ĐÃ THẮNG !"
+    if(click1==click2 && click2==click3) {
+        anh1.style.boxShadow=" red 4px 4px 9px"
+        anh2.style.boxShadow=" red 4px 4px 9px"
+        anh3.style.boxShadow=" red 4px 4px 9px"
+    }else {
+        anh1.style.boxShadow=" blue 4px 4px 9px"
+        anh2.style.boxShadow=" blue 4px 4px 9px"
+        anh3.style.boxShadow=" blue 4px 4px 9px"
     }
   }
 
